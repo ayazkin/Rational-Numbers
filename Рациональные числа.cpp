@@ -129,6 +129,12 @@ RationalNumbers Sledovanie(RationalNumbers** matrix, int rows, int cols) {
     return result;
 }
 
+void deleteMatrix(RationalNumbers** matrix, int cols) {
+    for (int i = 0; i < cols; i++) {
+        delete[] matrix[i];
+    }
+    delete matrix;
+}
 int main()
 {
     setlocale(LC_ALL, "RUSSIAN");
@@ -164,6 +170,9 @@ int main()
     scalaredNumber.Print();  // подсчитно вручную, результат должен быть 63/80
     cout << endl;
 
+    delete[] array1;
+    delete[] array2;
+
 
     cout << "Первая матрица создана со значениями" << endl;
     int rows1, cols1;
@@ -183,6 +192,9 @@ int main()
     RationalNumbers sledovanieResult = Sledovanie(multed_matrix, rows1, cols2);
     sledovanieResult.Print();
 
+    deleteMatrix(matrix1, cols1);
+    deleteMatrix(matrix2, cols2);
+    deleteMatrix(multed_matrix, cols2);
 }
 
 // TO DO:
