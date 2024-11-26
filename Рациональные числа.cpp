@@ -129,11 +129,11 @@ RationalNumbers Sledovanie(RationalNumbers** matrix, int rows, int cols) {
     return result;
 }
 
-void deleteMatrix(RationalNumbers** matrix, int cols) {
-    for (int i = 0; i < cols; i++) {
+void deleteMatrix(RationalNumbers** matrix, int rows) {
+    for (int i = 0; i < rows; i++) {
         delete[] matrix[i];
     }
-    delete matrix;
+    delete[] matrix;
 }
 int main()
 {
@@ -194,7 +194,7 @@ int main()
 
     deleteMatrix(matrix1, cols1);
     deleteMatrix(matrix2, cols2);
-    deleteMatrix(multed_matrix, cols2);
+    deleteMatrix(multed_matrix, rows2);
 }
 
 // TO DO:
