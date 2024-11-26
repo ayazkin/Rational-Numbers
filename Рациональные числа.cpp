@@ -5,9 +5,9 @@ using namespace std;
 
 class RationalNumbers {
 public:
-    RationalNumbers(int p_numerator, int p_denomintor) {
-        numerator = p_numerator;
-        denominator = p_denomintor;
+    RationalNumbers(int numerator, int denomintor) {
+        this->numerator = numerator;
+        this->denominator = denomintor;
     }
     RationalNumbers() {};
     void SetNumerator(int value) {
