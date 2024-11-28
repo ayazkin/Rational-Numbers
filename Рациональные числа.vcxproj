@@ -127,6 +127,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="RationalNumbers.cpp" />
     <ClCompile Include="Рациональные числа.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -134,6 +136,10 @@
     <Text Include="in2.txt" />
     <Text Include="in_matrix.txt" />
     <Text Include="in_matrix2.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="RationalNumbers.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
